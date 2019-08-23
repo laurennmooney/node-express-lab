@@ -1,0 +1,16 @@
+<main>
+    <h1>your cart <em>(mmmm, coffee)</em></h1>
+    <section>
+    <div class="cartItem" *ngFor="let item of cart">
+        <div class="itemInfo">
+        <p class="coffeeName">{{ item.product }}</p>
+        <p>Product Id: {{ item.id }}</p>
+        <p class="removeLink" (click)=deleteItem(item.id)>Remove item from cart</p>
+        </div>
+        <div class="itemInfo">
+        <p class="price">${{ item.price }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        </div>
+    </div>
+</section>
+</main>
